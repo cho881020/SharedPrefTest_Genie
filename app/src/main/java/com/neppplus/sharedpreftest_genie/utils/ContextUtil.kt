@@ -17,6 +17,13 @@ class ContextUtil {
 
         }
 
+        fun getAutoLogin(context: Context) : Boolean {
+
+            val pref = context.getSharedPreferences(prefName, Context.MODE_PRIVATE)
+            return pref.getBoolean(AUTO_LOGIN, false)
+
+        }
+
     }
 
 }
